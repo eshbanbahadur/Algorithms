@@ -1,6 +1,8 @@
 <?php
-// This Code will remove duplicate values from array 
 // Author: Eshban Bahadur
+// This Code will remove duplicate values from array without using any pre-defined function of PHP
+// PHP has built in function to perform this function : array_unique()
+// Also to find total number of duplicates in an array you can use array_count_values() function
 
 $array_values = array("a","b","c","a","a","b","d");
 
@@ -17,10 +19,10 @@ for($i=0;$i<count($array_values);$i++)
 	//Remove Duplicates from Loop //
 	for($j=0;$j<count($array_values);$j++)
 	{	
-		if($current_position<>$j)
+		if($current_position<>$j) //Do not compare the same value on same position
 		{
 			if($current_value==$array_values[$j])
-				$array_values[$j]="";
+			$array_values[$j]="";
 		}		
 	}	
 }
